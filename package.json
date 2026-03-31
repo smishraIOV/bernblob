@@ -1,0 +1,20 @@
+{
+  "name": "bernblob",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "encode": "node src/encode-cli.js",
+    "decode": "node src/decode-cli.js",
+    "hex:blob": "node src/hexToBlob.js",
+    "fetch:blobscan": "node src/fetchBlobFromBlobscan.js",
+    "kzg:dry-run": "node src/sendBlobSepolia.js --dry-run",
+    "send:sepolia": "node src/sendBlobSepolia.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ethers": "^6.16.0",
+    "kzg-wasm": "^1.0.0"
+  }
+}
