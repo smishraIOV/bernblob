@@ -120,6 +120,14 @@ async function main() {
   console.error("Broadcasting type-3 tx…");
   const tx = await wallet.sendTransaction(txRequest);
   console.log(tx.hash);
+  console.error(
+    `Etherscan tx: https://sepolia.etherscan.io/tx/${tx.hash}#blobs`
+  );
+  const vh =
+    (tx.blobVersionedHashes && tx.blobVersionedHashes[0]) || versionedHash;
+  if (vh) {
+    console.error(`Etherscan blob: https://sepolia.etherscan.io/blob/${vh}`);
+  }
   console.error("Waiting for 1 confirmation…");
   await tx.wait(1);
   console.error("Confirmed.");

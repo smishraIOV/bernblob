@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "encode": "node src/encode-cli.js",
+    "demo:encode": "node src/showEncodingDemo.js",
     "decode": "node src/decode-cli.js",
     "hex:blob": "node src/hexToBlob.js",
-    "fetch:blobscan": "node src/fetchBlobFromBlobscan.js",
     "kzg:dry-run": "node src/sendBlobSepolia.js --dry-run",
     "send:sepolia": "node src/sendBlobSepolia.js",
     "test": "node --test"
